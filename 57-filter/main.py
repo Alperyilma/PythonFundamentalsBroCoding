@@ -1,0 +1,22 @@
+# filter() -> creates a collection of elements from an iterable for which a function returns true
+# filter(function, iterable)
+
+friends = [("Rachel",19),
+           ("Monica",18),
+           ("Phoebe",17),
+           ("Joey",16),
+           ("Chandler",21),
+           ("Ross",20)]
+
+#sorted
+friends_age_sorted = lambda age: age[1]
+friends.sort(key=friends_age_sorted)
+
+#filtered
+age = lambda data: data[1] >= 18
+friends_map = list(filter(age,friends))
+
+for i in friends_map:
+    print(i)
+
+
